@@ -1,5 +1,7 @@
 package test;
 
+import java.util.Map;
+
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -17,9 +19,15 @@ public class Client {
 		phone.volumeDown();
 		phone.msg();*/
 		
-		Phone p1=(Phone)factory.getBean("galaxyPhone");
-		Phone p2=(Phone)factory.getBean("galaxyPhone");
-		Phone p3=(Phone)factory.getBean("galaxyPhone");
+//		Phone p1=(Phone)factory.getBean("galaxyPhone");
+//		Phone p2=(Phone)factory.getBean("galaxyPhone");
+//		Phone p3=(Phone)factory.getBean("galaxyPhone");
+		
+		CollectionTest ct = (CollectionTest)factory.getBean("ct");
+		Map<String> datas = ct.getMembers();
+		for(String v:datas) {
+			System.out.println(v);
+		}
 		
 		factory.close();
 	}
