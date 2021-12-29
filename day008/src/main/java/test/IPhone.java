@@ -1,6 +1,10 @@
 package test;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+@Component("iPhone")
 public class IPhone implements Phone{
+	@Autowired
 	private Watch watch;
 	private String uname;
 	public Watch getWatch() {
