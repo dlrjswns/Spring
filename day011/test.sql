@@ -8,3 +8,10 @@ create table board1(
    bdate date default sysdate,
    cnt int default 0
 );
+
+create table member1(
+	mid varchar(10) primary key,
+	password varchar(10),
+	name varchar(10),
+	role varchar(10)
+);
