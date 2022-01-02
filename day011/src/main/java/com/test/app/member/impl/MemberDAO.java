@@ -5,9 +5,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.springframework.stereotype.Repository;
+
 import com.test.app.common.JDBCUtil;
 import com.test.app.member.MemberVO;
 
+@Repository("memberDAO")
 public class MemberDAO {
 	private Connection conn=null;
 	private PreparedStatement pstmt=null;

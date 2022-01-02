@@ -3,6 +3,7 @@ package com.test.app.board.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.test.app.board.BoardService;
 import com.test.app.board.BoardVO;
@@ -11,6 +12,7 @@ import com.test.app.board.BoardVO;
 public class BoardServiceImpl implements BoardService{
 	@Autowired
 	private BoardDAO boardDAO;
+	
 	@Override
 	public void insertBoard(BoardVO vo) {
 		boardDAO.insertBoard(vo);
@@ -18,8 +20,7 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public void updateBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		
+		boardDAO.updateBoard(vo);
 	}
 
 	@Override
@@ -36,8 +37,7 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public List<BoardVO> selectAll(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		return boardDAO.selectAll(vo);
 	}
 
 }

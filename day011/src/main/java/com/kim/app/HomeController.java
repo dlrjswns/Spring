@@ -1,4 +1,4 @@
-package com.jun.app;
+package com.kim.app;
 
 import java.text.DateFormat;
 import java.util.Date;

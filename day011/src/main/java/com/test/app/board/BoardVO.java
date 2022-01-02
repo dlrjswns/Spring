@@ -9,7 +9,6 @@ public class BoardVO {
 	private String content;
 	private Date bdate;
 	private int cnt;
-	
 	public int getBid() {
 		return bid;
 	}
@@ -46,12 +45,9 @@ public class BoardVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
-	
 	@Override
 	public String toString() {
 		return "BoardVO [bid=" + bid + ", title=" + title + ", writer=" + writer + ", content=" + content + ", bdate="
 				+ bdate + ", cnt=" + cnt + "]";
 	}
-	
-	
 }
